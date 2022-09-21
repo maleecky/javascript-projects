@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonials App</title>
+    <script src="index.js" defer></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        background: url("./background.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        font-size: clamp(14px, 8vw, 16px);
+        font-family: sans-serif, Helvetica, sans-serif;
+      }
+      .testimonials {
+        backdrop-filter: blur(10px);
+        color: white;
+        height: 300px;
+        width: 50vw;
+        margin: 0 auto;
+        border-radius: 8px;
+        transition: all 0.2s ease-out;
+        background: rgba(83, 73, 255, 0.368);
+        text-align: center;
+        padding-left: 40px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+        position: relative;
+      }
+      .testimonial {
+        margin-right: 10px;
+      }
+      img {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+        position: relative;
+        top: -35px;
+      }
+      .ratings {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        display: flex;
+      }
+      #name {
+        text-transform: capitalize;
+      }
+      .message {
+        text-align: left;
+        width: 100%;
+      }
+      .ratings {
+        display: flex;
+        justify-content: center;
+      }
+      button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-transform: capitalize;
+        background-color: rgba(83, 73, 255);
+        border: none;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+        box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.368);
+      }
+      .next-btn {
+        right: -20px;
+      }
+      .prev-btn {
+        left: -20px;
+      }
+      @media screen and (max-width: 800px) {
+        .testimonials {
+          width: 70vw;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .testimonials {
+          width: 90vw;
+        }
+      }
+      @media screen and (max-width: 430px) {
+        .testimonials {
+          height: 340px;
+        }
+      }
+      @media screen and (max-width: 335px) {
+        .testimonials {
+          height: 380px;
+        }
+      }
+      @media screen and (max-width: 287px) {
+        .testimonials {
+          height: 420px;
+        }
+      }
+      @media screen and (max-width: 250px) {
+        .testimonials {
+          height: 440px;
+        }
+      }
+      @media screen and (max-width: 240px) {
+        body {
+          font-size: 15px;
+        }
+        .testimonials {
+          height: 470px;
+        }
+      }
+      @media screen and (max-width: 212px) {
+        .testimonials {
+          height: 550px;
+        }
+      }
+      @media screen and (max-width: 190px) {
+        .testimonials {
+          height: 600px;
+        }
+      }
+      @media screen and (max-width: 180px) {
+        .message {
+          width: 90px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="testimonials">
+        <button class="next-btn">next</button>
+        <button class="prev-btn">prev</button>
+        <div class="testimonial">
+          <div id="img"></div>
+          <p id="name"></p>
+          <div class="ratings"></div>
+          <div>
+            <p class="message"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

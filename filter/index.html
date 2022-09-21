@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter javascript project</title>
+    <script src="index.js" defer></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      img {
+        max-width: 100%;
+        object-fit: cover;
+        display: block;
+        aspect-ratio: 1/1;
+        width: 100%;
+      }
+      body {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+        line-height: 1.2;
+        width: 100%;
+        text-align: center;
+        background: #cedece;
+      }
+      .app {
+        width: 70%;
+        max-width: 1500px;
+        margin: 0 auto;
+      }
+      .search-container {
+        width: 100%;
+      }
+      .btn-container {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      button {
+        background: transparent;
+        border: 1px solid #d24433;
+        padding: 15px;
+        text-transform: capitalize;
+        color: #060c20;
+        cursor: pointer;
+        transition: all 0.2s ease-out;
+      }
+      button:hover{
+        background-color: #d24433;
+        color: #cedece;
+      }
+      input[type="text"] {
+        padding: 10px;
+        width: 40%;
+        max-width: 400px;
+      }
+      input[type="submit"] {
+        padding: 10px;
+        text-transform: capitalize;
+        background: #060c20;
+        color: #cedece;
+      }
+      .store {
+        display: grid;
+        gap: 1rem 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        margin-block: 3rem;
+        width: 100%;
+        transition: all 0.2s ease-out;
+      }
+
+      .item {
+        aspect-ratio: 1/1;
+        max-width: 400px;
+        display: grid;
+      }
+      .item > * {
+        grid-row: 1/2;
+        grid-column: 1/2;
+      }
+      .contents {
+        background: white;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        align-self: end;
+        padding-block: 20px;
+        box-shadow: 0 0.25rem 1rem rgb(0 0 0/0.1);
+      }
+      header {
+        font-size: clamp(1rem, 8vw, 2rem);
+        font-style: italic;
+        padding-top: 1.5rem;
+        padding-bottom: 2rem;
+      }
+
+      @media screen and (max-width: 587px) {
+        button {
+          padding: 10px;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        button {
+          margin-bottom: 10px;
+        }
+      }
+      @media screen and (max-width: 230px) {
+        button {
+          width: 100%;
+        }
+        .app {
+          width: 90%;
+        }
+        input[type="text"] {
+          width: 60%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header><span style="color: #d24433">MYSTORE</span>.com</header>
+    <section class="app">
+      <div class="btn-container">
+        <button data-filter="all">all</button>
+        <button data-filter="sweets">sweets</button>
+        <button data-filter="cupcakes">cupcakes</button>
+        <button data-filter="cakes">cakes</button>
+        <button data-filter="doughnut">doughnut</button>
+      </div>
+      <div class="search-container">
+        <form id="search-form">
+          <input type="text" name="text" />
+          <input type="submit" value="search" name="submit" />
+        </form>
+      </div>
+      <div class="store">
+        <div class="item sweets">
+          <img src="./sweet.jpg" alt="sweet" />
+          <div class="contents">
+            <p>200$</p>
+            <p>sweet</p>
+          </div>
+        </div>
+        <div class="item sweets">
+          <img src="./sweet2.jpg" alt="sweet" />
+          <div class="contents">
+            <p>190$</p>
+            <p>sweet nitch</p>
+          </div>
+        </div>
+        <div class="item cakes">
+          <img src="./cakes.jpg" alt="cakes" />
+          <div class="contents">
+            <p>220$</p>
+            <p>ariana cake</p>
+          </div>
+        </div>
+        <div class="item cakes">
+          <img src="./cake2.jpg" alt="cakes" />
+          <div class="contents">
+            <p>80$</p>
+            <p>kid cake</p>
+          </div>
+        </div>
+        <div class="item cupcakes">
+          <img src="./cupcake2.jpg" alt="cupcakes" />
+          <div class="contents">
+            <p>20$</p>
+            <p>fv cupcake</p>
+          </div>
+        </div>
+        <div class="item cupcakes">
+          <img src="./cupcakes.jpg" alt="cupcakes" />
+          <div class="contents">
+            <p>270$</p>
+            <p>sweet cupcake</p>
+          </div>
+        </div>
+        <div class="item doughnut">
+          <img src="./doughnut.jpg" alt="doughnut" />
+          <div class="contents">
+            <p>29$</p>
+            <p>world's doughnut</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

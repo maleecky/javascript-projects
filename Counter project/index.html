@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter App</title>
+    <script src="index.js" defer></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #ebe0df;
+        mix-blend-mode: multiply;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        font-size: 18px;
+        text-transform: capitalize;
+        line-height: 1.7;
+      }
+
+      p {
+        text-align: center;
+        font-size: 50px;
+      }
+      button {
+        padding: 10px;
+        cursor: pointer;
+        text-transform: capitalize;
+      }
+      h1 {
+        text-align: center;
+      }
+      @media screen and (max-width: 239px) {
+        button {
+          display: block;
+          width: 150px;
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <h1>counter</h1>
+      <p id="count"></p>
+      <button class="btn add">Add count</button>
+      <button class="btn lower">lower count</button>
+    </div>
+  </body>
+</html>
